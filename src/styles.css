@@ -1,0 +1,24 @@
+body {
+    background-color: #faebd7;
+}
+.Header {
+    background-color: #adb6c1;
+    border-top: 1px solid black;
+    border-left:1px solid black;
+    border-right: 1px solid black;
+    font-family: Verdana, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.listContent{
+    background-color: #e5e7e9;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    font-family: Verdana, Helvetica, sans-serif;
+}
+.listRows {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px dotted #818181;
+}
