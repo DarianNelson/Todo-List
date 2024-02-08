@@ -6,36 +6,6 @@ const ToDoListData = [
         "timeDue": "4:00 pm",
         "details": "Clean bathroom",
         "isDone": false
-    },
-    {
-        "task": "Clean Bedroom",
-        "timeDue": "5:00 pm",
-        "details": "Clean my bedroom",
-        "isDone": false
-    },
-    {
-        "task": "Fold Laundry",
-        "timeDue": "5:30 pm",
-        "details": "Fold all laundry",
-        "isDone": false
-    },
-    {
-        "task": "Cook Dinner",
-        "timeDue": "7:00 pm",
-        "details": "Cook dinner",
-        "isDone": false
-    },
-    {
-        "task": "Feed the Shib",
-        "timeDue": "7:30 pm",
-        "details": "Feed and water Fynn",
-        "isDone": false
-    },
-    {
-        "task": "Water Plants",
-        "timeDue": "7:35 pm",
-        "details": "Plants need watered",
-        "isDone": false
     }
 ]
 
