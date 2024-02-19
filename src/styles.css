@@ -22,3 +22,6 @@ body {
     padding-bottom: 5px;
     border-bottom: 2px dotted #818181;
 }
+.strikethrough {
+text-decoration: line-through;
+}
