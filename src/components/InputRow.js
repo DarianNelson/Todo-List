@@ -33,6 +33,14 @@ function InputRow() {
         })
     }
 
+    
+    function handleDeleteItem(event) {
+
+        setInputItem(prevInputItem => '')
+
+        //DO WE SPLICE THE ARRAY FOR THIS?
+    }
+
     //FUNCTION TO SUBMIT FORM
     function handleSubmit(event) {
 
@@ -51,64 +59,52 @@ function InputRow() {
         })
     }
     
-    console.log(inputItem)
 
     return(
         //INPUT BOX CONTENT
         <div className="row justify-content-center">
-           <ToDoRowList taskData={inputItem} />
-            <div className="col-sm-4">
+            <ToDoRowList taskData={inputItem} deleteTask={handleDeleteItem}/>
+                <div className="col-sm-4 inputContainer">
+                    {/* HEADER ABOVE INPUTS */}
+                    <h3>Add a Task</h3>
 
-                {/* HEADER ABOVE INPUTS */}
-                <h3>Add a Task</h3>
+                    {/* FORM BEGINS, RUN HANDLE SUBMIT FUNCTION ON SUBMIT */}
+                    <form onSubmit={handleSubmit}>
 
-                {/* FORM BEGINS, RUN HANDLE SUBMIT FUNCTION ON SUBMIT */}
-                <form onSubmit={handleSubmit}>
+                        {/* TASK TITLE */}
+                        <input 
+                        type='text'
+                        placeholder='Task Title'
+                        onChange={handleChange}
+                        name='title'
+                        value={formData.title} 
+                        />
 
-                    {/* TASK TITLE */}
-                    <input 
-                    type='text'
-                    placeholder='Task Title'
-                    onChange={handleChange}
-                    name='title'
-                    value={formData.title} 
-                    />
+                        {/* TIME DUE */}
+                        <input 
+                        type='text'
+                        placeholder='Time Due'
+                        onChange={handleChange}
+                        name='timeDue'
+                        value={formData.timeDue} 
+                        />
 
-                    {/* TIME DUE */}
-                    <input 
-                    type='text'
-                    placeholder='Time Due'
-                    onChange={handleChange}
-                    name='timeDue'
-                    value={formData.timeDue} 
-                    />
+                        {/* DESCRIPTION */}
+                        <input
+                        type='text'
+                        placeholder='Description'
+                        onChange={handleChange}
+                        name='desc'
+                        value={formData.desc} 
+                        />
 
-                    {/* DESCRIPTION */}
-                    <input
-                    type='text'
-                    placeholder='Description'
-                    onChange={handleChange}
-                    name='desc'
-                    value={formData.desc} 
-                    />
+                        <br />
 
-                    <br />
-
-                    {/* CHECKBOX */}
-                    {/* <input
-                    type="checkbox" 
-                    name="isDone" 
-                    checked={formData.isDone}
-                    onClick={handleClick}
-                    /> */}
-
-                    <br />
-
-                    {/* SUBMIT BUTTON */}
-                    <button>Submit</button>
-                    
-                </form>
-            </div>
+                        {/* SUBMIT BUTTON */}
+                        <button className='rounded'>Submit</button>
+                        
+                    </form>
+                </div>
         </div>
     )
 }

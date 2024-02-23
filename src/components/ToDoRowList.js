@@ -1,5 +1,4 @@
 import React from 'react'
-import InputRow from './InputRow'
 
 //FUNCTION FOR TO DO LIST ROW TEMPLATE
 function ToDoListItem(item) {
@@ -12,41 +11,41 @@ function ToDoListItem(item) {
     }
 
     return(
-        <div className="container">
-            <div className="row listRows">
+        <div className="row listRows">
 
-                {/* TITLE */}
-                <div className="col-sm-12">
-                    {isClicked ? <s><h4>{item.title}</h4></s> : <h4>{item.title}</h4>}
-                </div>
+            {/* TITLE */}
+            <div className="col-sm-12">
+                {isClicked ? <s><h4>{item.title}</h4></s> : <h4>{item.title}</h4>}
+            </div>
 
-                {/* TIME DUE */}
-                <div className="col-sm-4">
-                    {isClicked ? <s><p>{item.timeDue}</p> </s> : <p>{item.timeDue}</p>}
-                </div>
+            {/* TIME DUE */}
+            <div className="col-sm-4">
+                {isClicked ? <s><p>{item.timeDue}</p> </s> : <p>{item.timeDue}</p>}
+            </div>
 
-                {/* DESCRIPTION */}
-                <div className="col-sm-7">
-                    {isClicked ? <s><p>{item.details}</p> </s> : <p>{item.details}</p>}
-                </div>
+            {/* DESCRIPTION */}
+            <div className="col-sm-7">
+                {isClicked ? <s><p>{item.details}</p> </s> : <p>{item.details}</p>}
+            </div>
 
-                {/* COMPLETION CHECKBOX */}
-                <div className="col-sm-1">
-                    <input 
-                    className="checkbox" 
-                    type="checkbox" 
-                    // value={item.isDone}
-                    checked={isClicked}
-                    onClick={setBoolean}
-                    />
-                </div>
+            {/* COMPLETION CHECKBOX */}
+            <div className="col-sm-1">
+                <input 
+                className="checkbox" 
+                type="checkbox" 
+                // value={item.isDone}
+                checked={isClicked}
+                onClick={setBoolean}
+                />
             </div>
         </div>
     )
 }
 
 function ToDoRowList(inputItem) {
-    console.log(inputItem)
+
+    const deleteFunction = inputItem.deleteTask
+
     const ToDoListMapArray = inputItem.taskData.map((item) => {
         return <ToDoListItem 
         title={item.title} 
@@ -58,9 +57,8 @@ function ToDoRowList(inputItem) {
 
     return(
         <div className="row justify-content-center">
-            <div className="col-sm-4 listContent">
+            <div className="col-sm-4 ">
                 {ToDoListMapArray}
-                
             </div>
         </div>
     )

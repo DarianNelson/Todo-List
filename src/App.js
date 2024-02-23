@@ -7,7 +7,6 @@ function App() {
     return(
         <div className="container AppContainer">
             <Header />
-            
             <InputRow />
         </div>
     )
